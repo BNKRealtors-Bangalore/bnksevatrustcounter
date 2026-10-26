@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#b94110">
+  <meta name="description" content="Something wonderful is on its way. Launching 26 October 2026 at 4:45 PM IST.">
+  <title>Seva — Launching Soon</title>
+  <style>
+    *{box-sizing:border-box}html,body{margin:0;min-height:100%;}body{font-family:"Segoe UI",Arial,sans-serif;color:#fff6e7;background:#a6350c}main{min-height:100svh;position:relative;overflow:hidden;display:grid;place-items:center;background:radial-gradient(ellipse at 71% 44%,#ffb44c55 0,transparent 39%),radial-gradient(ellipse at 18% 13%,#ffbd3540,transparent 48%),linear-gradient(117deg,#8e290d 0%,#c44b12 46%,#ef841b 100%)}.aura{position:absolute;width:69vw;height:69vw;min-width:650px;min-height:650px;border-radius:50%;top:50%;left:69%;transform:translate(-50%,-50%);border:1px solid #ffda8b1c;box-shadow:0 0 110px #ffbd4330,inset 0 0 110px #ffb84a17}.aura:before,.aura:after{content:"";position:absolute;inset:7%;border:1px solid #ffda8b16;border-radius:50%}.aura:after{inset:17%}.symbols{position:absolute;inset:0;pointer-events:none;color:#ffdc9b}.symbols span{position:absolute;font-family:Georgia,"Nirmala UI",serif;font-size:var(--size,45px);opacity:var(--opacity,.1);transform:rotate(var(--rotate,-12deg));user-select:none}.stars{position:absolute;inset:0;background-image:radial-gradient(circle,#ffe7bb77 1px,transparent 1.5px),radial-gradient(circle,#ffe7bb44 1px,transparent 1.5px);background-size:139px 151px,223px 197px;background-position:29px 33px,70px 84px;opacity:.4}.content{position:relative;width:min(1120px,82%);display:grid;grid-template-columns:1fr;text-align:center;gap:60px;align-items:center;padding:80px 0}.heading{font-size:clamp(38px,4.55vw,65px);line-height:1.14;letter-spacing:-.035em;font-weight:650;margin:0;white-space:nowrap}.heading em{font-style:normal;color:#ffca72}.countdown{display:flex;justify-content:center;gap:32px;margin-top:34px}.unit{min-width:54px}.number{display:block;font-size:clamp(30px,3vw,43px);font-weight:350;line-height:1.1;font-variant-numeric:tabular-nums;letter-spacing:-.025em}.label{display:block;margin-top:7px;font-size:12px;color:#ffe8cf;letter-spacing:.025em}@media(min-width:1500px){.content{width:1120px}}@media(max-width:760px){.content{width:84%;grid-template-columns:1fr;gap:35px;padding:70px 0;text-align:center}.heading{font-size:clamp(30px,6.5vw,48px);white-space:normal}.countdown{justify-content:center;gap:25px;margin-top:29px}.aura{left:50%;top:66%}}
+    .content,.symbols,.stars,.aura{transition:opacity 1.1s ease,filter 1.1s ease}
+    main.finale .content,main.finale .symbols,main.finale .stars,main.finale .aura{opacity:0;filter:blur(5px);pointer-events:none}
+    .final-countdown{position:absolute;inset:0;display:grid;place-items:center;opacity:0;pointer-events:none;transition:opacity .85s ease;background:radial-gradient(circle at center,#ffce6b20,transparent 55%)}
+    main.finale .final-countdown{opacity:1}
+    .final-number{position:relative;display:grid;place-items:center;min-width:1.5em;min-height:1.5em;font-family:Georgia,"Nirmala UI",serif;font-size:clamp(110px,20vw,240px);font-weight:400;color:#fff0cb;text-shadow:0 0 45px #ffda8d44;line-height:1.3}
+    .final-number::before{content:"";position:absolute;inset:-25%;border-radius:50%;background:radial-gradient(circle,#ffd38320,transparent 68%);z-index:-1}
+    .final-number.breathe{animation:devotional-pulse 1s ease-out}
+    main.arrived .final-number{font-size:clamp(110px,18vw,210px);transition:font-size 1.5s ease}
+    @keyframes devotional-pulse{0%{opacity:.35;transform:scale(.97);filter:blur(2px)}40%{opacity:1;filter:blur(0)}100%{opacity:1;transform:scale(1)}}
+    @media(prefers-reduced-motion:reduce){.content,.symbols,.stars,.aura,.final-countdown{transition:none}.final-number.breathe{animation:none}}
+    .curtain-scene{position:absolute;inset:0;z-index:3;opacity:0;visibility:hidden;pointer-events:none;background:#6b210b;transition:opacity 1.8s ease,visibility 1.8s}
+    main.curtains .curtain-scene{opacity:1;visibility:visible}
+    main.curtains .final-countdown{opacity:0}
+    .curtain-panel{position:absolute;top:0;bottom:0;width:50%;background:linear-gradient(180deg,#ffcf6a22,transparent 35%,#4f120b66),repeating-linear-gradient(90deg,#8a280d 0%,#bf4611 4%,#ec7a21 8%,#dc6317 12%,#a7350e 16%,#7e230c 20%);box-shadow:inset 0 8px 30px #50170355}
+    .curtain-panel.left{left:0;border-right:2px solid #6d1c09;box-shadow:inset -12px 0 22px #4f180b55}
+    .curtain-panel.right{right:0;transform:scaleX(-1);border-right:2px solid #6d1c09;box-shadow:inset -12px 0 22px #4f180b55}
+    .curtain-panel::after{content:"";position:absolute;inset:auto 0 20px;height:5px;border-top:1px solid #ffdc8655;border-bottom:1px solid #ffdc8644}
+    .curtain-valance{position:absolute;inset:0 0 auto;height:65px;background:linear-gradient(#9b300e,#d56b1c 55%,#a8370e);border-radius:0 0 45% 45%;border-bottom:3px solid #eebc64;box-shadow:0 10px 30px #4f170b66}
+    .ribbon-band{position:absolute;top:50%;left:0;right:0;height:clamp(28px,5vw,45px);transform:translateY(-50%);background:linear-gradient(#ffe5a0,#e8ad43 20%,#f8d47d 48%,#c68b2c 88%,#f7d883);border-top:1px solid #ffecb5;border-bottom:1px solid #ae7620;box-shadow:0 7px 20px #4e180b66}
+    .ribbon-bow{position:absolute;top:50%;left:50%;width:clamp(170px,27vw,300px);transform:translate(-50%,-43%);filter:drop-shadow(0 8px 8px #521b0a66)}
+    @media(prefers-reduced-motion:reduce){.curtain-scene{transition:none}}
+    .curtain-scene{background:transparent}
+    .curtain-panel,.curtain-valance{transition:transform 2.6s cubic-bezier(.45,0,.15,1)}
+    .ribbon-band{background:none;border:0;box-shadow:none}
+    .ribbon-half{position:absolute;inset:0 50% 0 0;background:linear-gradient(#ffe5a0,#e8ad43 20%,#f8d47d 48%,#c68b2c 88%,#f7d883);border-top:1px solid #ffecb5;border-bottom:1px solid #ae7620;box-shadow:0 7px 20px #4e180b66;transition:transform 1.4s ease,opacity 1.4s ease}
+    .ribbon-half:last-child{inset:0 0 0 50%}
+    .ribbon-bow path{transform-box:fill-box;transform-origin:center;transition:transform 1.2s ease,opacity 1s ease}
+    main.untying .ribbon-bow g:first-of-type path:nth-child(odd){transform:translate(-75px,35px) rotate(-22deg) scaleX(1.3);opacity:0}
+    main.untying .ribbon-bow g:first-of-type path:nth-child(even){transform:translate(75px,35px) rotate(22deg) scaleX(1.3);opacity:0}
+    main.untying .ribbon-bow g:last-child{opacity:0;transition:opacity .5s ease}
+    main.untying .ribbon-half:first-child{transform:translateX(-105%);opacity:0}
+    main.untying .ribbon-half:last-child{transform:translateX(105%);opacity:0}
+    main.opening .curtain-panel.left{transform:translateX(-100%)}
+    main.opening .curtain-panel.right{transform:translateX(100%) scaleX(-1)}
+    main.opening .curtain-valance{transform:translateY(-110%)}
+    .curtain-hint{position:absolute;bottom:9%;left:0;right:0;text-align:center;font-size:12px;letter-spacing:.12em;color:#ffe5a6;opacity:.8;transition:opacity .5s ease}
+    main.untying .curtain-hint{opacity:0}
+    @media(prefers-reduced-motion:reduce){.curtain-panel,.curtain-valance,.ribbon-half,.ribbon-bow path,.curtain-hint{transition:none}}
+    .live-message{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:28px;opacity:0;visibility:hidden;transform:translateY(12px);transition:opacity 1.8s ease,transform 1.8s ease,visibility 1.8s}
+    main.opening .live-message{opacity:1;visibility:visible;transform:translateY(0)}
+    .live-om{font-family:Georgia,"Nirmala UI",serif;font-size:42px;color:#ffdc91;margin-bottom:14px;text-shadow:0 0 24px #ffd18155}
+    .live-message h2{font-family:Georgia,serif;font-weight:400;font-size:clamp(30px,4.5vw,54px);margin:0 0 12px;color:#fff1d4}
+    .live-message p{font-size:clamp(15px,1.6vw,19px);margin:0 0 20px;color:#ffe6be;line-height:1.6}
+    .live-message a{color:#fff0c5;font-size:clamp(17px,2vw,24px);text-decoration-thickness:1px;text-underline-offset:6px;overflow-wrap:anywhere;line-height:1.6}
+    .live-message a:focus-visible{outline:2px solid #ffe4a0;outline-offset:8px;border-radius:2px}
+    @media(prefers-reduced-motion:reduce){.live-message{transition:none;transform:none}}
+    .blessing-rain{position:absolute;inset:0;overflow:hidden;z-index:4;pointer-events:none;opacity:0;transition:opacity 1s ease;mask-image:radial-gradient(ellipse 28% 23% at 50% 50%,#0003, #000 100%)}
+    main.opening .blessing-rain{opacity:1}
+    .blessing-drop{position:absolute;top:-40px;left:var(--x);font-family:Georgia,"Nirmala UI",serif;font-size:var(--size);letter-spacing:.04em;color:#ffe4a4;opacity:0;text-shadow:0 0 5px #ffe8b699,0 0 12px #ffc45b66;will-change:transform,opacity}
+    main.opening .blessing-drop{animation:blessing-fall var(--duration) linear var(--delay) infinite}
+    @keyframes blessing-fall{0%{transform:translate3d(0,-40px,0) rotate(-8deg);opacity:0}12%{opacity:var(--glow)}80%{opacity:var(--glow)}100%{transform:translate3d(var(--drift),calc(100svh + 180px),0) rotate(20deg);opacity:0}}
+    @media(prefers-reduced-motion:reduce){.blessing-rain{display:none}.blessing-drop{will-change:auto;animation:none!important}}
+  </style>
+</head>
+<body>
+  <main>
+    <div class="aura" aria-hidden="true"></div><div class="stars" aria-hidden="true"></div>
+    <div class="symbols" aria-hidden="true">
+      <span style="left:5%;top:9%;--size:56px;--opacity:.09">ॐ</span><span style="left:27%;top:4%;--size:29px;--rotate:15deg">ॐ</span><span style="left:54%;top:14%;--size:74px;--opacity:.07;--rotate:8deg">ॐ</span><span style="right:6%;top:7%;--size:42px">ॐ</span><span style="left:13%;top:68%;--size:35px;--rotate:12deg">ॐ</span><span style="left:38%;top:80%;--size:68px;--opacity:.07">ॐ</span><span style="right:20%;top:76%;--size:42px;--rotate:10deg">ॐ</span><span style="right:2%;top:49%;--size:76px;--opacity:.06">ॐ</span><span style="left:2%;top:41%;--size:24px">ॐ</span><span style="left:66%;top:93%;--size:28px">ॐ</span>
+    </div>
+    <section class="content" aria-label="Coming soon">
+      <div>
+        <h1 class="heading">We’re <em>Launching</em> Soon</h1>
+        <div class="countdown" role="timer" aria-label="Countdown to launch">
+          <div class="unit"><span class="number" id="days">00</span><span class="label">Days</span></div>
+          <div class="unit"><span class="number" id="hours">00</span><span class="label">Hours</span></div>
+          <div class="unit"><span class="number" id="minutes">00</span><span class="label">Minutes</span></div>
+          <div class="unit"><span class="number" id="seconds">00</span><span class="label">Seconds</span></div>
+        </div>
+      </div>
+    </section>
+    <div class="final-countdown" role="timer" aria-label="Final countdown" aria-hidden="true">
+      <span class="final-number" id="final-number"></span>
+    </div>
+    <section class="live-message" aria-hidden="true" aria-labelledby="live-title">
+      <span class="live-om" aria-hidden="true">ॐ</span>
+      <h2 id="live-title">Congratulations!</h2>
+      <p>BNK Seva Trust’s website is now live.</p>
+      <a href="https://www.bnksevatrust.org" tabindex="-1">www.bnksevatrust.org</a>
+    </section>
+    <div class="curtain-scene" role="img" aria-label="Closed saffron curtains tied with a golden ribbon" aria-hidden="true">
+      <div class="curtain-panel left"></div><div class="curtain-panel right"></div>
+      <div class="curtain-valance"></div><div class="ribbon-band"><span class="ribbon-half"></span><span class="ribbon-half"></span></div>
+      <svg class="ribbon-bow" viewBox="0 0 300 230" aria-hidden="true">
+        <defs><linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff0b9"/><stop offset=".4" stop-color="#efc364"/><stop offset=".75" stop-color="#bb7a23"/><stop offset="1" stop-color="#ffe5a0"/></linearGradient></defs>
+        <g fill="url(#gold)" stroke="#f9dc92" stroke-width="1.5">
+          <path d="M141 95C106 109 66 155 46 204L85 191 105 220C109 172 134 135 153 109Z"/>
+          <path d="M159 95C194 109 234 155 254 204L215 191 195 220C191 172 166 135 147 109Z"/>
+          <path d="M142 76C112 26 38 8 19 39 0 75 62 122 139 104L150 91Z"/>
+          <path d="M158 76C188 26 262 8 281 39 300 75 238 122 161 104L150 91Z"/>
+          <path d="M139 74Q150 68 161 74L169 106Q151 119 131 106Z"/>
+        </g>
+        <g fill="none" stroke="#9e661e" stroke-width="2" opacity=".45"><path d="M31 46Q71 45 136 89M269 46Q229 45 164 89M142 115Q112 158 102 190M158 115Q188 158 198 190"/></g>
+      </svg>
+      <p class="curtain-hint">Press any key to begin</p>
+    </div>
+    <div class="blessing-rain" aria-hidden="true"></div>
+  </main>
+  <script>
+    const LAUNCH_DATE = '2026-10-26T16:43:00+05:30';
+    const target = new Date(LAUNCH_DATE).getTime();
+    const main = document.querySelector('main');
+    const content = document.querySelector('.content');
+    const finale = document.querySelector('.final-countdown');
+    const finalNumber = document.getElementById('final-number');
+    const curtainScene = document.querySelector('.curtain-scene');
+    const OM_HOLD_MS = 3000;
+    const blessingRain = document.querySelector('.blessing-rain');
+    const blessingGlyphs = ['ॐ','ॐ','ॐ','श्री','राम','ॐ','सेवा'];
+    // Four staggered streams per column fill the screen without large clusters.
+    const rainColumns = window.innerWidth < 600 ? 12 : 24;
+    for(let i=0;i<rainColumns*4;i++){
+      const column = i % rainColumns;
+      const row = Math.floor(i / rainColumns);
+      const duration = 12 + (column % 5);
+      const drop = document.createElement('span');
+      drop.className = 'blessing-drop';
+      drop.textContent = blessingGlyphs[i % blessingGlyphs.length];
+      drop.style.setProperty('--x',`${(column+.25+(row%2)*.35)/rainColumns*100}%`);
+      drop.style.setProperty('--size',`${11+(i*3)%8}px`);
+      drop.style.setProperty('--duration',`${duration}s`);
+      drop.style.setProperty('--delay',`${-duration*((row+.15+(column%3)*.15)/4)}s`);
+      drop.style.setProperty('--drift',`${(i%2 ? 1 : -1)*(5+(i%9))}px`);
+      drop.style.setProperty('--glow',`${.24+(i%4)*.065}`);
+      blessingRain.appendChild(drop);
+    }
+    let previousNumber = null;
+    let revealStarted = false;
+    function openCurtains(event){
+      if(event.repeat || event.isComposing || revealStarted || Date.now() < target + OM_HOLD_MS) return;
+      // Keep browser shortcuts available; a plain key press starts the ceremony.
+      if(event.ctrlKey || event.metaKey || event.altKey) return;
+      event.preventDefault();
+      revealStarted = true;
+      main.classList.add('untying');
+      curtainScene.setAttribute('aria-label','Golden ribbon untying');
+      setTimeout(()=>{
+        main.classList.add('opening');
+        curtainScene.setAttribute('aria-label','Saffron curtains opening');
+        document.querySelector('.live-message').setAttribute('aria-hidden','false');
+        document.querySelector('.live-message a').removeAttribute('tabindex');
+      },1200);
+      setTimeout(()=>{
+        curtainScene.setAttribute('aria-hidden','true');
+        // Hold the fully revealed congratulations message for five seconds.
+        setTimeout(()=>{
+          window.location.assign('https://www.bnksevatrust.org');
+        },5000);
+      },3900);
+    }
+    document.addEventListener('keydown',openCurtains);
+    function tick(){
+      const remaining = target-Date.now();
+      const total = Math.max(0,Math.ceil(remaining/1000));
+      const isFinale = remaining <= 10000;
+      const showCurtains = remaining <= -OM_HOLD_MS;
+      main.classList.toggle('finale',isFinale);
+      main.classList.toggle('arrived',remaining <= 0);
+      main.classList.toggle('curtains',showCurtains);
+      if(!revealStarted) curtainScene.setAttribute('aria-hidden',String(!showCurtains));
+      content.setAttribute('aria-hidden',String(isFinale));
+      finale.setAttribute('aria-hidden',String(!isFinale || showCurtains));
+      if(isFinale){
+        const nextNumber = total > 0 ? String(total) : 'ॐ';
+        if(nextNumber !== previousNumber){
+          finalNumber.textContent = nextNumber;
+          finalNumber.classList.remove('breathe');
+          void finalNumber.offsetWidth;
+          finalNumber.classList.add('breathe');
+          finale.setAttribute('aria-label',total > 0 ? `${total} seconds to launch` : 'Om');
+          previousNumber = nextNumber;
+        }
+        return;
+      }
+      const values={days:Math.floor(total/86400),hours:Math.floor(total/3600)%24,minutes:Math.floor(total/60)%60,seconds:total%60};
+      for(const [id,value] of Object.entries(values))document.getElementById(id).textContent=String(value).padStart(2,'0');
+    }
+    tick();setInterval(tick,100);
+    document.addEventListener('visibilitychange',tick);
+  </script>
+</body>
+</html>
